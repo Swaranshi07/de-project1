@@ -1,0 +1,149 @@
+[0m12:56:47.927656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA4084C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA1910B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA693F9D0>]}
+
+
+============================== 12:56:47.932588 | b79a61fa-af60-4eb2-97fc-b37184ae9736 ==============================
+[0m12:56:47.932588 [info ] [MainThread]: Running with dbt=1.12.2
+[0m12:56:47.933562 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sharm\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt init', 'log_path': 'logs'}
+[0m12:56:47.947682 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\sharm\.dbt
+[0m12:58:07.106848 [debug] [MainThread]: Starter project path: C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:58:07.133559 [info ] [MainThread]: Setting up your profile.
+[0m12:58:18.426521 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m12:58:18.426946 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m12:58:18.427440 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:32:26.940132 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m22:32:27.020976 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\cli\main.py", line 504, in init
+    results = task.run()
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\task\init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\task\init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\task\init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\task\init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\task\init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\click\termui.py", line 218, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\sharm\de-project1\venv\Lib\site-packages\click\termui.py", line 201, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:32:27.039320 [debug] [MainThread]: Command `dbt init` failed at 22:32:27.038546 after 34539.32 seconds
+[0m22:32:27.041639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA83795B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA836E450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DDA8382470>]}
+[0m22:32:27.043731 [debug] [MainThread]: Flushing usage events
+[0m22:32:32.085855 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:37:26.753901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A19F654C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A19CEE0B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A1A1F0F9D0>]}
+
+
+============================== 22:37:26.817579 | a7f168aa-d9fc-487b-a4ab-94154e16b1b4 ==============================
+[0m22:37:26.817579 [info ] [MainThread]: Running with dbt=1.12.2
+[0m22:37:26.819400 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sharm\\.dbt', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'logs'}
+[0m22:46:50.873423 [info ] [MainThread]: A project called flight_pipeline already exists here.
+[0m22:46:50.876563 [debug] [MainThread]: Command `dbt init` succeeded at 22:46:50.876112 after 564.34 seconds
+[0m22:46:50.877698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A1A1D3FA80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A1A1FC2F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002A1A1F4A8B0>]}
+[0m22:46:50.878764 [debug] [MainThread]: Flushing usage events
+[0m22:47:00.025813 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:48:56.194415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023011FC4C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002300F8C0B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002301487F9D0>]}
+
+
+============================== 22:48:56.197282 | 0c0c6a7e-0f71-4be6-97df-a4c815a8b6dd ==============================
+[0m22:48:56.197282 [info ] [MainThread]: Running with dbt=1.12.2
+[0m22:48:56.197958 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sharm\\.dbt', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'logs'}
+[0m22:49:04.197737 [debug] [MainThread]: Starter project path: C:\Users\sharm\de-project1\venv\Lib\site-packages\dbt\include\starter_project
+[0m22:49:04.253928 [info ] [MainThread]: Setting up your profile.
+[0m22:49:09.847104 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:49:09.847854 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:49:09.848472 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:55:05.531365 [info ] [MainThread]: Profile flight_pipeline written to C:\Users\sharm\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m22:55:05.545421 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m22:55:05.547852 [info ] [MainThread]: dbt version: 1.12.2
+[0m22:55:05.549761 [info ] [MainThread]: python version: 3.14.7
+[0m22:55:05.551457 [info ] [MainThread]: python path: C:\Users\sharm\de-project1\venv\Scripts\python.exe
+[0m22:55:05.553354 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m22:55:05.625132 [info ] [MainThread]: Using profiles dir at C:\Users\sharm\.dbt
+[0m22:55:05.625971 [info ] [MainThread]: Using profiles.yml file at C:\Users\sharm\.dbt\profiles.yml
+[0m22:55:05.626430 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\sharm\de-project1\flight_pipeline\dbt_project.yml
+[0m22:55:05.627805 [info ] [MainThread]: adapter type: snowflake
+[0m22:55:05.628765 [info ] [MainThread]: adapter version: 1.12.0
+[0m22:55:05.705248 [info ] [MainThread]: Configuration:
+[0m22:55:05.705916 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:55:05.706332 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:55:05.706706 [info ] [MainThread]: Required dependencies:
+[0m22:55:05.706990 [debug] [MainThread]: Executing "git --help"
+[0m22:55:05.804322 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:55:05.805307 [debug] [MainThread]: STDERR: "b''"
+[0m22:55:05.806208 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:55:05.807275 [info ] [MainThread]: Connection:
+[0m22:55:05.808757 [info ] [MainThread]:   account: OSNZMZQ-DT17082
+[0m22:55:05.809768 [info ] [MainThread]:   user: SWARANSHIDE07
+[0m22:55:05.810676 [info ] [MainThread]:   database: de_project1
+[0m22:55:05.811633 [info ] [MainThread]:   warehouse: de_wh
+[0m22:55:05.812457 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m22:55:05.813132 [info ] [MainThread]:   schema: raw
+[0m22:55:05.813752 [info ] [MainThread]:   authenticator: None
+[0m22:55:05.814371 [info ] [MainThread]:   oauth_client_id: None
+[0m22:55:05.815148 [info ] [MainThread]:   query_tag: None
+[0m22:55:05.815860 [info ] [MainThread]:   client_session_keep_alive: False
+[0m22:55:05.816571 [info ] [MainThread]:   host: None
+[0m22:55:05.817221 [info ] [MainThread]:   port: None
+[0m22:55:05.817848 [info ] [MainThread]:   proxy_host: None
+[0m22:55:05.818378 [info ] [MainThread]:   proxy_port: None
+[0m22:55:05.818999 [info ] [MainThread]:   protocol: None
+[0m22:55:05.819627 [info ] [MainThread]:   connect_retries: 1
+[0m22:55:05.820138 [info ] [MainThread]:   connect_timeout: None
+[0m22:55:05.820676 [info ] [MainThread]:   retry_on_database_errors: False
+[0m22:55:05.821140 [info ] [MainThread]:   retry_all: False
+[0m22:55:05.821674 [info ] [MainThread]:   insecure_mode: False
+[0m22:55:05.822149 [info ] [MainThread]:   reuse_connections: True
+[0m22:55:05.823026 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m22:55:05.823913 [info ] [MainThread]:   workload_identity_provider: None
+[0m22:55:05.824778 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m22:55:05.825558 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m22:55:05.826451 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m22:55:06.108497 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m22:55:06.111264 [debug] [MainThread]: Using snowflake connection "debug"
+[0m22:55:06.111504 [debug] [MainThread]: On debug: select 1 as id
+[0m22:55:06.111693 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:55:11.150037 [debug] [MainThread]: SQL status: SUCCESS 1 in 5.038 seconds
+[0m22:55:11.152937 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:55:11.154750 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:55:11.156754 [info ] [MainThread]: Your new dbt project "flight_pipeline" was created!
+Initialized new project in C:\Users\sharm\de-project1\flight_pipeline\flight_pipeline
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:55:11.160731 [debug] [MainThread]: Command `dbt init` succeeded at 22:55:11.160224 after 375.17 seconds
+[0m22:55:11.161864 [debug] [MainThread]: Connection 'debug' was left open.
+[0m22:55:11.162633 [debug] [MainThread]: On debug: Close
+[0m22:55:11.311724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230146AFA80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002300F6384D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002301665C490>]}
+[0m22:55:11.312881 [debug] [MainThread]: Flushing usage events
+[0m22:55:13.375273 [debug] [MainThread]: An error was encountered while trying to flush usage events
