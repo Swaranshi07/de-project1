@@ -2,6 +2,11 @@ Welcome to your new dbt project!
 
 ### Using the starter project
 
+
+
+Airport congestion / bottleneck detection
+"Which airports contribute the most delay minutes across all flights passing through them?" 
+
 Try running the following commands:
 - dbt run
 - dbt test

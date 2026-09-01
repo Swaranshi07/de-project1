@@ -1,0 +1,16 @@
+version: 2 
+
+
+sources:
+  - name: flight_info
+    description: "Raw data from our flights."
+    database: de_project1               # The actual database name in your warehouse
+    schema: raw  
+    tables:
+    - name: raw_flights
+
+    
+
+
+
+   
