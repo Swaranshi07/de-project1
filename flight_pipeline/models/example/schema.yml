@@ -4,4 +4,7 @@ version: 2
 models:
   - name: fetch_data
     description: "clean data"
+  - name: selected_columns 
+    description: "select columns"
+
     
